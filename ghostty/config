@@ -1,0 +1,8 @@
+# themes
+# theme = Bright Lights
+
+# colors
+background = 000000
+foreground = ffffff
+
+macos-titlebar-style = hidden

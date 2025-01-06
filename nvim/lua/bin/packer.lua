@@ -7,6 +7,20 @@ return require('packer').startup(function(use)
   -- Gruvbox Theme
   use "ellisonleao/gruvbox.nvim"
 
+  -- LLM
+  use({
+     "olimorris/codecompanion.nvim",
+  config = function()
+    require("codecompanion").setup()
+  end,
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+  }
+  })
+  use 'jpmcb/nvim-llama'
+  use "David-Kunz/gen.nvim"
+
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
@@ -42,5 +56,8 @@ return require('packer').startup(function(use)
   use('nvim-lua/plenary.nvim')
   use('crispgm/nvim-go')
   use('rcarriga/nvim-notify')
+
+  -- Rust
+  use('rust-lang/rust.vim')
 
 end)
